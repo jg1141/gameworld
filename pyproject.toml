@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "gameworld"
-version = "0.0.0a0"
+dynamic = ["version"]
 authors = [
     {name = "VERSES Research", email = "verses.research@verses.ai"},
 ]
@@ -17,8 +17,13 @@ dependencies = [
     "imageio==2.36.0",
 ]
 
+[tool.setuptools_scm]
+
 [tool.setuptools.packages.find]
-include = ["gameworld"]
+include = ["gameworld*"]
+
+[tool.setuptools.exclude-package-data]
+"*" = ["*.gif", "make_videos.py"]
 
 [project.optional-dependencies]
 
