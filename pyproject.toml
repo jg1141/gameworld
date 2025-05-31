@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0", "setuptools-scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gameworld"
+version = "0.0.0a0"
+authors = [
+    {name = "VERSES Research", email = "verses.research@verses.ai"},
+]
+description = "Gameworld: Environments for 2-D Arcade Games in Python"
+readme = "README.md"
+requires-python = ">=3.10,<3.12"
+dependencies = [
+    "numpy==1.26.4",
+    "gymnasium==0.29.1",
+    "imageio==2.36.0",
+]
+
+[tool.setuptools.packages.find]
+include = ["gameworld"]
+
+[project.optional-dependencies]
+
+test = [
+    "pytest",
+    "pytest-cov"
+]
