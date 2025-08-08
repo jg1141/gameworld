@@ -12,6 +12,7 @@ GAME_NAMES = [
     "Hunt",
     "Impact",
     "Jump",
+    "Cartpole",
 ]
 
 def create_gameworld_env(game, *, perturb=None, perturb_step=5000, **kwargs):
