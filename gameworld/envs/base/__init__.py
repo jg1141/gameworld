@@ -8,6 +8,7 @@ from gameworld.envs.base.gold import Gold
 from gameworld.envs.base.hunt import Hunt
 from gameworld.envs.base.impact import Impact
 from gameworld.envs.base.jump import Jump
+from gameworld.envs.base.cartpole import Cartpole
 
 
 def create_gameworld_env(game, **kwargs):
@@ -31,5 +32,7 @@ def create_gameworld_env(game, **kwargs):
         return Impact(**kwargs)
     elif game == "Jump":
         return Jump(**kwargs)
+    elif game == "Cartpole":
+        return Cartpole(**kwargs)
     else:
         raise Exception(f"Unsupported game in the gameworld set: {game}")
